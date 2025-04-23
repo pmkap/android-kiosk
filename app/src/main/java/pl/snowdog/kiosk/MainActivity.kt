@@ -112,11 +112,11 @@ class MainActivity : AppCompatActivity() {
                 return
             }
 
-            if (!url.startsWith("http")) {
-                url = "https://$url"
-            } else if (!url.startsWith("https")) {
-                url = url.replace("http", "https")
-            }
+            //if (!url.startsWith("http")) {
+            //    url = "https://$url"
+            //} else if (!url.startsWith("https")) {
+            //    url = url.replace("http", "https")
+            //}
         }
 
         if (isAdmin) {
