@@ -55,6 +55,7 @@ class WebviewActivity : AppCompatActivity() {
         listenToConnectionChange()
 
         val fab: View = findViewById(R.id.fab)
+        fab.setAlpha(0f)
         fab.setOnClickListener {
             showDialog()
         }
