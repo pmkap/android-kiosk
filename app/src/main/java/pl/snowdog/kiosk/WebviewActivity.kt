@@ -81,6 +81,11 @@ class WebviewActivity : AppCompatActivity() {
             }
         }
 
+        builder.setNeutralButton("Reload Page") { _, _ ->
+            val webView = findViewById<WebView>(R.id.webView)
+            webView.reload()
+        }
+
         val dialog = builder.show()
         val button = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
         button.isEnabled = false
