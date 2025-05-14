@@ -1,5 +1,4 @@
 #!/bin/sh
-
 set -e
 
 # build docker image
@@ -18,3 +17,7 @@ adb uninstall pl.snowdog.kiosk || true
 # reinstall
 adb install -r -t app/build/outputs/apk/debug/app-debug.apk
 adb shell dpm set-device-owner pl.snowdog.kiosk/.MyDeviceAdminReceiver
+
+# settings
+adb shell settings put system accelerometer_rotation 1
+adb shell locksettings clear --old 1234
